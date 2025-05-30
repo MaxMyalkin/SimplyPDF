@@ -37,6 +37,7 @@ abstract class CommonActions(protected val context: Context) {
             .paperSize(PrintAttributes.MediaSize.ISO_A4)
             .margin(Margin(15U, 15U, 15U, 15U))
             .paperOrientation(DocumentInfo.Orientation.PORTRAIT)
+            .dpi(300)
             .pageModifier(PageHeader(LinkedList<Cell>().apply {
                 add(TextCell("PDF Generated Using SimplyPDF", TextProperties().apply {
                     textSize = 24

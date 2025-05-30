@@ -19,6 +19,7 @@ class DocumentInfo internal constructor() {
     var colorMode: ColorMode = ColorMode.COLOR
     var margins: Margin = Margin.default
     var orientation: Orientation = Orientation.PORTRAIT
+    var dpi: Int = 300
 
     /*
      *

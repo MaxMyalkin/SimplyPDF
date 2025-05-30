@@ -37,6 +37,7 @@ class TestPageSetup(context: Context) : CommonActions(context) {
             .margin(Margin(startMargin.toUInt(), topMargin.toUInt(), endMargin.toUInt(), bottomMargin.toUInt()))
             .paperOrientation(DocumentInfo.Orientation.PORTRAIT)
             .firstPageBackgroundColor(Color.parseColor("#C8C8C8"))
+            .dpi(300)
             .pageModifier(PageHeader(LinkedList<Cell>().apply {
                 add(TextCell("PDF Generated Using SimplyPDF", TextProperties().apply {
                     textSize = 24

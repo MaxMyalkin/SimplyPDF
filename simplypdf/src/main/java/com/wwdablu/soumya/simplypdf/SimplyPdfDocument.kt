@@ -109,6 +109,14 @@ class SimplyPdfDocument internal constructor(
         printAttributes = PrintAttributes.Builder()
             .setColorMode(documentInfo.resolveColorMode())
             .setMediaSize(documentInfo.paperSize)
+            .setResolution(
+                PrintAttributes.Resolution(
+                    "resolutionId",
+                    "label",
+                    documentInfo.dpi,
+                    documentInfo.dpi
+                )
+            )
             .setMinMargins(documentInfo.margins.getMargin())
             .build()
         pdfDocument = PrintedPdfDocument(context, printAttributes)

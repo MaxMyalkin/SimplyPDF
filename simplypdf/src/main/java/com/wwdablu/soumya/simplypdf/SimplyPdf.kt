@@ -38,6 +38,11 @@ class SimplyPdf private constructor(private val context: Context, outputPdf: Fil
         return this
     }
 
+    fun dpi(dpi: Int): SimplyPdf {
+        document.documentInfo.dpi = dpi
+        return this
+    }
+
     fun firstPageBackgroundColor(@ColorInt bgColor: Int) : SimplyPdf {
         pageBgColor = bgColor
         return this
